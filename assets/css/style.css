@@ -1,0 +1,397 @@
+@import url('libs/bootstrap.min.css');
+@import url('libs/bootstrap-theme.min.css');
+@import url(http://fonts.googleapis.com/css?family=Alegreya+Sans:400,400italic,700,700italic|Metrophobic);
+@charset "utf-8";
+/* BOX-SIZING */
+/* BOX-SHADOW */
+/* PLACEHOLDER-TEXT */
+/* CLEARFIX */
+/* SIZE */
+/* RETINA BACKGROUNDS */
+/* Iconfont */
+/* LESS-Functions */
+/* mixins */
+/* Basic CSS */
+ul.unstyled,
+ol.unstyled,
+ul.horizontal,
+ol.horizontal {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+ul.horizontal:before,
+ol.horizontal:before,
+ul.horizontal:after,
+ol.horizontal:after {
+  content: " ";
+  display: table;
+}
+ul.horizontal:after,
+ol.horizontal:after {
+  clear: both;
+}
+ul.horizontal > li,
+ol.horizontal > li {
+  float: left;
+}
+.alignLeft {
+  text-align: left;
+}
+.alignCenter {
+  text-align: center;
+}
+.alignRight {
+  text-align: right;
+}
+.fixed {
+  position: fixed;
+}
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+.lastInRow {
+  clear: right !important;
+}
+/* Google Web Fonts */
+/* Unser CSS */
+body {
+  font-family: 'Alegreya Sans', 'Helvetica', Arial, sans-serif;
+  font-weight: 400;
+  background-image: url("../img/bright_squares.png");
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  body {
+    background-image: url("/img/bright_squares_@2X.png");
+    background-size: 594px 594px;
+  }
+}
+em,
+i {
+  font-weight: 400;
+}
+strong {
+  font-weight: 700;
+}
+#shoutbox {
+  width: 400px;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+#shoutbox h1 {
+  font-family: 'Metrophobic', 'Helvetica', Arial, sans-serif;
+  font-size: 30px;
+  line-height: 35px;
+  padding-left: 44px;
+  position: relative;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  margin-bottom: 1px;
+  padding-bottom: 5px;
+}
+#shoutbox h1:after {
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 1px;
+  width: 100%;
+  content: '';
+  background: #fff;
+}
+#shoutbox h1:before {
+  position: absolute;
+  font-family: shoutbox;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 35px;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: 'a';
+  left: 5px;
+  font-size: 28px;
+  top: 0;
+}
+#shoutbox h1 a {
+  position: absolute;
+  top: 50%;
+  margin-top: -3px;
+  right: 0;
+  font-size: 12px;
+  line-height: 1;
+  color: #000;
+  text-decoration: none;
+  text-transform: lowercase;
+  padding-bottom: 2px;
+  border-bottom: 1px dotted #000;
+}
+#shoutbox h1 a:hover {
+  border-bottom-style: solid;
+}
+#shoutbox .shout {
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  margin-bottom: 1px;
+  padding: 8px 0;
+}
+#shoutbox .shout:before,
+#shoutbox .shout:after {
+  content: " ";
+  display: table;
+}
+#shoutbox .shout:after {
+  clear: both;
+}
+#shoutbox .shout .infos {
+  padding: 4px 0;
+  float: left;
+  border-right: 1px solid rgba(0, 0, 0, 0.3);
+}
+#shoutbox .shout .infos span {
+  display: block;
+  position: relative;
+  padding-left: 28px;
+  margin-right: 4px;
+}
+#shoutbox .shout .infos span + span {
+  margin-top: 5px;
+}
+#shoutbox .shout .infos span i {
+  display: block;
+  text-indent: -999em;
+}
+#shoutbox .shout .infos span.user:before {
+  content: 'c';
+}
+#shoutbox .shout .infos span.time:before {
+  content: 'b';
+}
+#shoutbox .shout .infos span:hover:before {
+  color: #000;
+}
+#shoutbox .shout .infos span:before {
+  color: rgba(0, 0, 0, 0.5);
+  cursor: help;
+  left: 0;
+  font-size: 18px;
+  width: 28px;
+  height: 28px;
+  text-align: center;
+  position: absolute;
+  text-indent: 0px;
+  font-family: shoutbox;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 20px;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+#shoutbox .shout:first-child {
+  border-top: 0;
+}
+#shoutbox .shout p {
+  margin: 0;
+  padding: 0 10px;
+  width: 360px;
+  float: left;
+  font-size: 16px;
+  line-height: 1.5;
+}
+#shoutbox form {
+  border-bottom: 1px solid #fff;
+  padding: 50px 50px 0;
+  margin-bottom: 50px;
+}
+#shoutbox form input,
+#shoutbox form textarea,
+#shoutbox form button {
+  width: 100%;
+}
+#shoutbox form input,
+#shoutbox form textarea {
+  border: 0;
+  background: #fff;
+  -webkit-box-shadow: inset 0 0 5px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 0 5px 0 rgba(0, 0, 0, 0.1);
+  color: #000;
+  font-size: 16px;
+}
+#shoutbox form input:-moz-placeholder,
+#shoutbox form textarea:-moz-placeholder {
+  color: #9e9e9e;
+}
+#shoutbox form input::-moz-placeholder,
+#shoutbox form textarea::-moz-placeholder {
+  color: #9e9e9e;
+}
+#shoutbox form input:-ms-input-placeholder,
+#shoutbox form textarea:-ms-input-placeholder {
+  color: #9e9e9e;
+}
+#shoutbox form input::-webkit-input-placeholder,
+#shoutbox form textarea::-webkit-input-placeholder {
+  color: #9e9e9e;
+}
+#shoutbox form input {
+  height: 40px;
+  line-height: 40px;
+  padding: 0 10px;
+}
+#shoutbox form textarea {
+  margin: 5px 0;
+  padding: 10px;
+  height: 150px;
+  line-height: 1.4;
+}
+#shoutbox form button {
+  color: #fff;
+  border: 0;
+  background: #9e9e9e;
+  height: 40px;
+  line-height: 40px;
+  font-size: 20px;
+}
+#shoutbox form button span {
+  position: relative;
+  left: -3px;
+}
+#shoutbox form button span:before {
+  font-family: shoutbox;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 35px;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: '0';
+  position: relative;
+  top: 2px;
+  margin-right: 5px;
+}
+#count {
+  font-size: 25px;
+  line-height: 25px;
+  padding: 5px 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  position: relative;
+  margin-bottom: 0px;
+}
+#count:after {
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 1px;
+  width: 100%;
+  content: '';
+  background: #fff;
+}
+#count strong {
+  position: relative;
+  top: -3px;
+}
+#changelog {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#changelog .version {
+  display: block;
+  line-height: 25px;
+  font-size: 20px;
+  font-family: 'Metrophobic', 'Helvetica', Arial, sans-serif;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+#changelog > li {
+  display: block;
+  background: rgba(0, 0, 0, 0.1);
+}
+#changelog > li:hover,
+#changelog > li.active {
+  background: rgba(0, 0, 0, 0.2);
+}
+#changelog ul {
+  padding: 20px;
+  background: #fff;
+  list-style: none;
+  margin: 0;
+}
+#changelog ul li:before,
+#changelog ul li:after {
+  content: " ";
+  display: table;
+}
+#changelog ul li:after {
+  clear: both;
+}
+#changelog ul li + li {
+  margin-top: 10px;
+}
+#changelog ul li > span {
+  width: 70px;
+  margin-right: 10px;
+}
+#changelog ul li > div,
+#changelog ul li > span {
+  float: left;
+}
+#changelog ul li > div {
+  width: 280px;
+}
+/* Iconfont "shoutbox" */
+@font-face {
+  font-family: 'shoutbox';
+  src: url('../fonts/shoutbox.eot?-kfs25o');
+  src: url('../fonts/shoutbox.eot?#iefix-kfs25o') format('embedded-opentype'), url('../fonts/shoutbox.woff?-kfs25o') format('woff'), url('../fonts/shoutbox.ttf?-kfs25o') format('truetype'), url('../fonts/shoutbox.svg?-kfs25o#shoutbox') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: shoutbox;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-chat:before {
+  content: "\30";
+}
+.icon-chat-1:before {
+  content: "\31";
+}
+.icon-chat-2:before {
+  content: "\32";
+}
+.icon-chat-3:before {
+  content: "\33";
+}
+.icon-chat-fin:before {
+  content: "\34";
+}
+.icon-shoutbox:before {
+  content: "\61";
+}
+.icon-clock:before {
+  content: "\62";
+}
+.icon-user:before {
+  content: "\63";
+}

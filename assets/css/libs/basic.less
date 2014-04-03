@@ -1,0 +1,45 @@
+/* LESS-Functions */
+@import "mixins.less"; /* mixins */
+
+/* Basic CSS */
+ul, ol {
+    &.unstyled, &.horizontal {
+    	margin: 0;
+    	padding: 0;
+        list-style: none;
+    }
+    &.horizontal {
+        .clearfix();
+        &> li {
+            float: left;
+        }
+    }
+}
+
+.alignLeft {
+    text-align: left;
+}
+
+.alignCenter {
+    text-align: center;
+}
+
+.alignRight {
+    text-align: right;
+}
+
+.fixed {
+    position: fixed;
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.lastInRow {
+    clear: right !important;
+}

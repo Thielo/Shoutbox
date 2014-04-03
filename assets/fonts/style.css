@@ -1,0 +1,49 @@
+@font-face {
+	font-family: 'shoutbox';
+	src:url('fonts/shoutbox.eot?-kfs25o');
+	src:url('fonts/shoutbox.eot?#iefix-kfs25o') format('embedded-opentype'),
+		url('fonts/shoutbox.woff?-kfs25o') format('woff'),
+		url('fonts/shoutbox.ttf?-kfs25o') format('truetype'),
+		url('fonts/shoutbox.svg?-kfs25o#shoutbox') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'shoutbox';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-chat:before {
+	content: "\30";
+}
+.icon-chat-1:before {
+	content: "\31";
+}
+.icon-chat-2:before {
+	content: "\32";
+}
+.icon-chat-3:before {
+	content: "\33";
+}
+.icon-chat-fin:before {
+	content: "\34";
+}
+.icon-shoutbox:before {
+	content: "\61";
+}
+.icon-clock:before {
+	content: "\62";
+}
+.icon-user:before {
+	content: "\63";
+}
