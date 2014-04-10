@@ -1,3 +1,5 @@
+<?php include('includes/database.php'); ?>
+<?php include('includes/put.php'); ?>
 <!doctype html>
 <html lang="de">
 	<head>
@@ -7,32 +9,15 @@
 	</head>
 	<body class="no-js">
 		<div id="shoutbox">
-			<h1>Shoutbox <a href="changelog.php">Version 0.1</a></h1>
-			<p id="count"><strong>47</strong> Shouts gefunden</p>
-			<div id="shouts">
-				<div class="shout">
-					<div class="infos">
-						<span class="user"><i>Richard Thiel</i></span>
-						<span class="time"><i>07:45 Uhr</i></span>
-					</div>
-					<p>
-						Überall dieselbe alte Leier. Das Layout ist fertig, der Text lässt auf sich warten. Damit das Layout nun nicht nackt im Raume steht und sich klein und leer vorkommt, springe ich ein: der Blindtext. Genau zu diesem Zwecke erschaffen, immer im Schatten meines großen Bruders &raquo;Lorem Ipsum&laquo;
-					</p>
-				</div>
-				<div class="shout">
-					<div class="infos">
-						<span class="user"><i>Richard Thiel</i></span>
-						<span class="time"><i>07:45 Uhr</i></span>
-					</div>
-					<p>
-						Überall dieselbe alte Leier. Das Layout ist fertig, der Text lässt auf sich warten. Damit das Layout nun nicht nackt im Raume steht und sich klein und leer vorkommt, springe ich ein: der Blindtext. Genau zu diesem Zwecke erschaffen, immer im Schatten meines großen Bruders &raquo;Lorem Ipsum&laquo;
-					</p>
-				</div>
-			</div>
+			<h1>Shoutbox <a href="changelog.php">Version 0.2</a></h1>
+			<?php include('includes/fetch.php'); ?>
 			<form action="index.php" method="POST">
-				<input name="name" type="text" placeholder="Dein Name" value="" />
-				<textarea name="message" placeholder="Deine Nachricht"></textarea>
-				<button><span>Shout</span></button>
+				<input type="hidden" name="submit" value="1" />
+				<input name="name" type="text" placeholder="Dein Name" value="<?php echo $fields['name']['value']; ?>" class="<?php echo $fields['name']['class']; ?>" />
+				<?php if($fields['name']['errorText'] != ''){ echo '<p>'.$fields['name']['errorText'].'</p>'; } ?>
+				<textarea name="message" placeholder="Deine Nachricht" class="<?php echo $fields['message']['class']; ?>"><?php echo $fields['message']['value']; ?></textarea>
+				<?php if($fields['message']['errorText'] != ''){ echo '<p>'.$fields['message']['errorText'].'</p>'; } ?>
+				<button type="submit"><span>Shout</span></button>
 			</form>
 		</div>
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

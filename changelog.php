@@ -22,6 +22,19 @@
 						</li>
 					</ul>
 				</li>
+				<li>
+					<span class="version">Version 0.2</span>
+					<ul>
+						<li>
+							<span><span class="label label-success">hinzugefügt</span></span>
+							<div>PHP eingefügt zum Eintragen von Shouts</div>
+						</li>
+						<li>
+							<span><span class="label label-success">hinzugefügt</span></span>
+							<div>PHP eingefügt zum Auslesen von Shouts</div>
+						</li>
+					</ul>
+				</li>
 			</ul>
 		</div>
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

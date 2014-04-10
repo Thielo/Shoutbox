@@ -133,6 +133,12 @@ strong {
 		border-bottom: 1px solid #fff;
 		padding: 50px 50px 0;
 		margin-bottom: 50px;
+		p {
+			color: #660000;
+			font-weight: bold;
+			padding-top: 5px;
+			font-style: italic;
+		}
 		input, textarea, button {
 			width: 100%;
 		}
@@ -142,7 +148,12 @@ strong {
 			.box-shadow(inset 0 0 5px 0 rgba(0,0,0,.1));
 			.placeholder(#9e9e9e);
 			color: #000;
+			border: 1px solid rgba(0,0,0,.1);
 			font-size: 16px;
+			&.error {
+				border-color: #660000;
+				.placeholder(#660000);
+			}
 		}
 		input {
 			height: 40px;
@@ -194,10 +205,10 @@ strong {
 		background: #fff;
 	}
 	strong {
-		position: relative;
-		top: -3px;
+		font-size: 36px;
+    	position: relative;
+    	top: 0;
 	}
-
 }
 
 #changelog {
